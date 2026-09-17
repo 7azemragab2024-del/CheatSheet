@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>JavaScript Cheat Sheet</h1>
+            <p>Pick a topic and see only the syntax you need.</p>
+        </header>
+
+        <section class="controls">
+            <label for="topic-select">Choose a topic</label>
+            <select id="topic-select" class="topic-select">
+                <option value="normalFunction">Normal Function</option>
+                <option value="arrowFunction">Arrow Function</option>
+                <option value="functionCall">Call a Function</option>
+                <option value="returnValue">Return</option>
+                <option value="ifElse">If / Else</option>
+                <option value="forEachArrow">forEach — Arrow Function</option>
+                <option value="forEachNormal">forEach — Normal Function</option>
+                <option value="eventListener">Event Listener</option>
+                <option value="keydown">Keydown</option>
+                <option value="preventDefault">preventDefault</option>
+                <option value="querySelector">querySelector</option>
+                <option value="inputValue">Input Value</option>
+                <option value="innerHTML">innerHTML</option>
+                <option value="jsStyle">Change CSS with JavaScript</option>
+                <option value="object">Object</option>
+                <option value="array">Array</option>
+                <option value="arrayObjects">Array of Objects</option>
+                <option value="localStorage">localStorage</option>
+                <option value="setTimeout">setTimeout</option>
+                <option value="setInterval">setInterval</option>
+                <option value="mathRandom">Math.random</option>
+                <option value="templateString">Template String</option>
+                <option value="map">map</option>
+                <option value="filter">filter</option>
+            </select>
+        </section>
+
+        <section class="card">
+            <h2 class="topic-title"></h2>
+
+            <div class="section-block">
+                <h3>Syntax</h3>
+                <pre class="code-box"><code class="syntax-code"></code></pre>
+            </div>
+
+            <div class="section-block">
+                <h3>Meaning</h3>
+                <p class="meaning"></p>
+            </div>
+
+            <div class="section-block">
+                <h3>Remember</h3>
+                <p class="remember"></p>
+            </div>
+        </section>
+
+        <section class="quick-guide">
+            <h2>Quick meaning guide</h2>
+            <div class="guide-grid">
+                <div><strong>parameter</strong><span>placeholder inside a function</span></div>
+                <div><strong>argument</strong><span>real value sent into a function</span></div>
+                <div><strong>item</strong><span>current array item</span></div>
+                <div><strong>index</strong><span>current item's position</span></div>
+                <div><strong>event</strong><span>information about what happened</span></div>
+                <div><strong>element</strong><span>selected HTML element</span></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
