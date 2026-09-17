@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, sans-serif;
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0d0f12;
+    color: #f5f7fa;
+    padding: clamp( 18px, 4vw, 48px );
+}
+
+.app {
+    width: min( 900px, 100% );
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.app-header h1 {
+    margin: 0 0 10px;
+    font-size: clamp( 32px, 5vw, 50px );
+}
+
+.app-header p {
+    margin: 0;
+    color: #aab2bd;
+    font-size: 16px;
+}
+
+.controls {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.controls label {
+    font-weight: 700;
+}
+
+.topic-select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #343a40;
+    border-radius: 10px;
+    background: #171a1f;
+    color: #f5f7fa;
+    font-size: 16px;
+    outline: none;
+}
+
+.topic-select:focus {
+    border-color: #29a36a;
+}
+
+.card,
+.quick-guide {
+    background: #15181d;
+    border: 1px solid #2b3037;
+    border-radius: 14px;
+    padding: clamp( 18px, 4vw, 30px );
+}
+
+.card {
+    margin-bottom: 22px;
+}
+
+.topic-title,
+.quick-guide h2 {
+    margin-top: 0;
+}
+
+.topic-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.section-block + .section-block {
+    margin-top: 24px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    color: #56d391;
+    font-size: 17px;
+}
+
+.code-box {
+    margin: 0;
+    padding: 18px;
+    overflow-x: auto;
+    border-radius: 10px;
+    background: #090b0e;
+    border: 1px solid #23272e;
+    font-size: 15px;
+    line-height: 1.65;
+    white-space: pre;
+}
+
+.meaning,
+.remember {
+    margin: 0;
+    color: #d6dbe1;
+    line-height: 1.7;
+}
+
+.quick-guide h2 {
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+    gap: 12px;
+}
+
+.guide-grid div {
+    display: grid;
+    gap: 5px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #101318;
+    border: 1px solid #252a31;
+}
+
+.guide-grid strong {
+    color: #56d391;
+}
+
+.guide-grid span {
+    color: #bcc4ce;
+    line-height: 1.5;
+}
+
+@media ( max-width: 600px ) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .code-box {
+        font-size: 13px;
+        padding: 14px;
+    }
+}
