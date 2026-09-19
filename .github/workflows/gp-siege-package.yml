@@ -1,0 +1,27 @@
+name: GP SIEGE package
+on:
+  push:
+    branches:
+      - gp-siege-render-temp
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download rendered Short
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 'https://media.descriptusercontent.com/proxy/remux?url=https%3A%2F%2Fapi.descript.com%2Fv2%2Fpublished_projects%2F5f72d047-1e4e-4d54-b120-6a16c68f30af%2Fhls%3Fexpiration%3D1789933388321%26signature%3D12538c3979a3b99b89d174b85c059c8ca60a52203e55a8975edb5f04005066d3&filename=GH+ST+PISTONS+-+SIEGE+Promo+%28Vertical%29.mp4&mediaCacheBucketName=production-273614-media-cache&expiration=1789929788&signature=39d5501da9e27eceff8e75a50f223d499aa552585acc91bea0a5c080683b76cd' --output SIEGE_short.mp4
+          test -s SIEGE_short.mp4
+          file SIEGE_short.mp4
+      - name: Package ZIP
+        shell: bash
+        run: |
+          zip -9 SIEGE_short.zip SIEGE_short.mp4
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SIEGE-short-zip
+          path: SIEGE_short.zip
+          if-no-files-found: error
+          retention-days: 1
